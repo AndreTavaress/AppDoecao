@@ -514,9 +514,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   );
                                 },
                                 child: FaIcon(
-                                  FontAwesomeIcons.upload,
-                                  color: Color(0xFF8E8E97),
-                                  size: 40,
+                                  FontAwesomeIcons.history,
+                                  color: Color(0xFFC43232),
+                                  size: 35,
                                 ),
                               ),
                             ),

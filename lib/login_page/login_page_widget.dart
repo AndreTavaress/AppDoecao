@@ -46,7 +46,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  ImmmmWidget(),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 70),
+                    child: ImmmmWidget(),
+                  ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                     child: SingleChildScrollView(

@@ -1,6 +1,6 @@
 // Export pages
-export 'login_page/login_page_widget.dart' show LoginPageWidget;
 export 'load_page/load_page_widget.dart' show LoadPageWidget;
+export 'login_page/login_page_widget.dart' show LoginPageWidget;
 export 'registrar/registrar_widget.dart' show RegistrarWidget;
 export 'home/home_widget.dart' show HomeWidget;
 export 'lista_agendamentos/lista_agendamentos_widget.dart'
