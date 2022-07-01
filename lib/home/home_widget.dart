@@ -4,8 +4,8 @@ import '../doacao_esp/doacao_esp_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../lista_agendamentos/lista_agendamentos_widget.dart';
+import '../load_page/load_page_widget.dart';
 import '../local/local_widget.dart';
-import '../login_page/login_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -38,7 +38,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                 await Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LoginPageWidget(),
+                    builder: (context) => LoadPageWidget(),
                   ),
                   (r) => false,
                 );

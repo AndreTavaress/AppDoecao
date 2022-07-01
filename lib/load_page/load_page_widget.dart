@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../login_page/login_page_widget.dart';
@@ -13,7 +14,26 @@ class LoadPageWidget extends StatefulWidget {
   _LoadPageWidgetState createState() => _LoadPageWidgetState();
 }
 
-class _LoadPageWidgetState extends State<LoadPageWidget> {
+class _LoadPageWidgetState extends State<LoadPageWidget>
+    with TickerProviderStateMixin {
+  final animationsMap = {
+    'containerOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      duration: 600,
+      hideBeforeAnimating: true,
+      fadeIn: true,
+      initialState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 0,
+      ),
+      finalState: AnimationState(
+        offset: Offset(0, 0),
+        scale: 1,
+        opacity: 1,
+      ),
+    ),
+  };
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -28,6 +48,12 @@ class _LoadPageWidgetState extends State<LoadPageWidget> {
         ),
       );
     });
+
+    startPageLoadAnimations(
+      animationsMap.values
+          .where((anim) => anim.trigger == AnimationTrigger.onPageLoad),
+      this,
+    );
   }
 
   @override
@@ -61,7 +87,7 @@ class _LoadPageWidgetState extends State<LoadPageWidget> {
                   fit: BoxFit.contain,
                 ),
               ),
-            ),
+            ).animated([animationsMap['containerOnPageLoadAnimation']]),
           ),
         ),
       ),
