@@ -6,6 +6,7 @@ import '../home/home_widget.dart';
 import '../login_page/login_page_widget.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RegistrarWidget extends StatefulWidget {
@@ -54,11 +55,14 @@ class _RegistrarWidgetState extends State<RegistrarWidget> {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Image.asset(
-                        'assets/images/logo-removebg-preview.png',
-                        width: 50,
-                        height: 270,
-                        fit: BoxFit.contain,
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 70),
+                        child: Image.asset(
+                          'assets/images/Icon.png',
+                          width: 50,
+                          height: 190,
+                          fit: BoxFit.contain,
+                        ),
                       ),
                       Material(
                         color: Colors.transparent,

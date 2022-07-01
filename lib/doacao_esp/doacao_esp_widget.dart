@@ -9,6 +9,7 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import '../home/home_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DoacaoEspWidget extends StatefulWidget {
@@ -39,7 +40,7 @@ class _DoacaoEspWidgetState extends State<DoacaoEspWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFB4E4FF),
         automaticallyImplyLeading: false,
         leading: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
@@ -56,8 +57,11 @@ class _DoacaoEspWidgetState extends State<DoacaoEspWidget> {
             onPressed: () async {
               await Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => HomeWidget(),
+                PageTransition(
+                  type: PageTransitionType.rightToLeft,
+                  duration: Duration(milliseconds: 300),
+                  reverseDuration: Duration(milliseconds: 300),
+                  child: HomeWidget(),
                 ),
               );
             },

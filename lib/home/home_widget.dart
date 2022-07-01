@@ -4,8 +4,10 @@ import '../doacao_esp/doacao_esp_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../lista_agendamentos/lista_agendamentos_widget.dart';
+import '../local/local_widget.dart';
 import '../login_page/login_page_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -496,10 +498,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                                  EdgeInsetsDirectional.fromSTEB(0, 10, 10, 0),
                               child: InkWell(
                                 onTap: () async {
                                   await Navigator.push(
@@ -521,6 +524,40 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                             ),
                           ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                                child: InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      PageTransition(
+                                        type: PageTransitionType.bottomToTop,
+                                        duration: Duration(milliseconds: 300),
+                                        reverseDuration:
+                                            Duration(milliseconds: 300),
+                                        child: LocalWidget(),
+                                      ),
+                                    );
+                                  },
+                                  child: FaIcon(
+                                    FontAwesomeIcons.mapMarkedAlt,
+                                    color: Color(0xFFC43232),
+                                    size: 35,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],

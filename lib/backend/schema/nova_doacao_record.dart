@@ -25,6 +25,25 @@ abstract class NovaDoacaoRecord
   String get uid;
 
   @nullable
+  String get email;
+
+  @nullable
+  @BuiltValueField(wireName: 'display_name')
+  String get displayName;
+
+  @nullable
+  @BuiltValueField(wireName: 'photo_url')
+  String get photoUrl;
+
+  @nullable
+  @BuiltValueField(wireName: 'created_time')
+  DateTime get createdTime;
+
+  @nullable
+  @BuiltValueField(wireName: 'phone_number')
+  String get phoneNumber;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -32,7 +51,11 @@ abstract class NovaDoacaoRecord
     ..data = ''
     ..hora = ''
     ..tipoSangue = ''
-    ..uid = '';
+    ..uid = ''
+    ..email = ''
+    ..displayName = ''
+    ..photoUrl = ''
+    ..phoneNumber = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('nova_doacao');
@@ -60,6 +83,11 @@ Map<String, dynamic> createNovaDoacaoRecordData({
   String hora,
   String tipoSangue,
   String uid,
+  String email,
+  String displayName,
+  String photoUrl,
+  DateTime createdTime,
+  String phoneNumber,
 }) =>
     serializers.toFirestore(
         NovaDoacaoRecord.serializer,
@@ -67,4 +95,9 @@ Map<String, dynamic> createNovaDoacaoRecordData({
           ..data = data
           ..hora = hora
           ..tipoSangue = tipoSangue
-          ..uid = uid));
+          ..uid = uid
+          ..email = email
+          ..displayName = displayName
+          ..photoUrl = photoUrl
+          ..createdTime = createdTime
+          ..phoneNumber = phoneNumber));

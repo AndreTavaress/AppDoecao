@@ -3,6 +3,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../login_page/login_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoadPageWidget extends StatefulWidget {
@@ -22,11 +23,8 @@ class _LoadPageWidgetState extends State<LoadPageWidget> {
     SchedulerBinding.instance?.addPostFrameCallback((_) async {
       await Navigator.push(
         context,
-        PageTransition(
-          type: PageTransitionType.topToBottom,
-          duration: Duration(milliseconds: 1000),
-          reverseDuration: Duration(milliseconds: 1000),
-          child: LoginPageWidget(),
+        MaterialPageRoute(
+          builder: (context) => LoginPageWidget(),
         ),
       );
     });

@@ -6,6 +6,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../home/home_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DoacaoImprimirWidget extends StatefulWidget {
@@ -23,7 +24,7 @@ class _DoacaoImprimirWidgetState extends State<DoacaoImprimirWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFB4E4FF),
         automaticallyImplyLeading: false,
         leading: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
@@ -147,9 +148,10 @@ class _DoacaoImprimirWidgetState extends State<DoacaoImprimirWidget> {
                             child: SizedBox(
                               width: 50,
                               height: 50,
-                              child: CircularProgressIndicator(
+                              child: SpinKitRing(
                                 color:
                                     FlutterFlowTheme.of(context).primaryColor,
+                                size: 50,
                               ),
                             ),
                           );
@@ -215,10 +217,11 @@ class _DoacaoImprimirWidgetState extends State<DoacaoImprimirWidget> {
                                           child: SizedBox(
                                             width: 50,
                                             height: 50,
-                                            child: CircularProgressIndicator(
+                                            child: SpinKitRing(
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primaryColor,
+                                              size: 50,
                                             ),
                                           ),
                                         );

@@ -8,3 +8,4 @@ export 'lista_agendamentos/lista_agendamentos_widget.dart'
 export 'doacao/doacao_widget.dart' show DoacaoWidget;
 export 'doacao_imprimir/doacao_imprimir_widget.dart' show DoacaoImprimirWidget;
 export 'doacao_esp/doacao_esp_widget.dart' show DoacaoEspWidget;
+export 'local/local_widget.dart' show LocalWidget;

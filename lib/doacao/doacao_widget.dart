@@ -10,6 +10,7 @@ import '../home/home_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DoacaoWidget extends StatefulWidget {
@@ -220,6 +221,13 @@ class _DoacaoWidgetState extends State<DoacaoWidget> {
                                     },
                                     currentTime: getCurrentTimestamp,
                                     minTime: DateTime(0, 0, 0),
+                                    locale: LocaleType.values.firstWhere(
+                                      (l) =>
+                                          l.name ==
+                                          FFLocalizations.of(context)
+                                              .languageCode,
+                                      orElse: null,
+                                    ),
                                   );
                                 },
                                 text: 'Data +',

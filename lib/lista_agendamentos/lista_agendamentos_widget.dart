@@ -5,6 +5,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home/home_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ListaAgendamentosWidget extends StatefulWidget {
@@ -23,7 +24,7 @@ class _ListaAgendamentosWidgetState extends State<ListaAgendamentosWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFB4E4FF),
         automaticallyImplyLeading: false,
         leading: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
@@ -41,7 +42,7 @@ class _ListaAgendamentosWidgetState extends State<ListaAgendamentosWidget> {
               await Navigator.push(
                 context,
                 PageTransition(
-                  type: PageTransitionType.leftToRight,
+                  type: PageTransitionType.topToBottom,
                   duration: Duration(milliseconds: 300),
                   reverseDuration: Duration(milliseconds: 300),
                   child: HomeWidget(),
@@ -85,8 +86,9 @@ class _ListaAgendamentosWidgetState extends State<ListaAgendamentosWidget> {
                         child: SizedBox(
                           width: 50,
                           height: 50,
-                          child: CircularProgressIndicator(
+                          child: SpinKitRing(
                             color: FlutterFlowTheme.of(context).primaryColor,
+                            size: 50,
                           ),
                         ),
                       );
